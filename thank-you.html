@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anfrage eingegangen – Löwe Smart Devices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#071018;--bgs:#0b1825;--panel:#0f2032;--text:#eef3f8;--ts:rgba(238,243,248,.70);--tm:rgba(238,243,248,.42);--border:rgba(110,193,255,.13);--borders:rgba(110,193,255,.07);--acc:#5db8ff;--acc2:#82ccff;--ok:#3dd68c;--r:4px;--rl:8px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Inter Tight',sans-serif;letter-spacing:-.022em}
+a{color:inherit;text-decoration:none}
+
+nav{height:64px;display:flex;align-items:center;background:rgba(7,16,24,.94);border-bottom:1px solid var(--borders);padding:0 48px;justify-content:space-between}
+.nl{display:flex;align-items:center;gap:10px}
+.lm{width:30px;height:30px;background:var(--acc);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.lm svg{width:16px;height:16px}
+.lt{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:15px;color:var(--text)}.lt span{color:var(--acc)}
+.back{font-size:14px;color:var(--ts);display:flex;align-items:center;gap:6px;transition:color .2s}.back:hover{color:var(--text)}
+.back svg{width:14px;height:14px}
+
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;position:relative;overflow:hidden}
+main::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(93,184,255,.05) 0%,transparent 65%);pointer-events:none}
+
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--rl);padding:56px 52px;max-width:600px;width:100%;text-align:center;position:relative;z-index:1}
+.check{width:56px;height:56px;background:rgba(61,214,140,.12);border:1px solid rgba(61,214,140,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+.check svg{width:24px;height:24px;color:var(--ok)}
+.card h1{font-size:32px;font-weight:800;margin-bottom:12px}
+.card p{font-size:16px;color:var(--ts);line-height:1.72;margin-bottom:8px}
+.card .sub{font-size:14px;color:var(--tm);margin-bottom:40px}
+
+.divider{height:1px;background:var(--borders);margin:36px 0}
+
+.cal-section h2{font-size:20px;font-weight:700;margin-bottom:8px}
+.cal-section p{font-size:14px;color:var(--ts);line-height:1.65;margin-bottom:24px}
+
+/* Calendly embed placeholder */
+.cal-embed{background:var(--bgs);border:1px solid var(--borders);border-radius:var(--r);padding:40px 24px;text-align:center}
+.cal-icon{width:44px;height:44px;background:rgba(93,184,255,.1);border:1px solid rgba(93,184,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.cal-icon svg{width:20px;height:20px;color:var(--acc)}
+.cal-embed p{font-size:14px;color:var(--tm);line-height:1.65;margin-bottom:4px}
+.cal-embed code{font-size:12px;color:var(--acc);background:rgba(93,184,255,.08);padding:3px 10px;border-radius:2px;font-family:monospace}
+
+/* Real Calendly integration instruction comment */
+/* Replace .cal-embed div with:
+   <div class="calendly-inline-widget" data-url="https://calendly.com/DEIN-LINK" style="min-width:320px;height:630px;"></div>
+   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+*/
+
+.btn-back{display:inline-flex;align-items:center;gap:8px;margin-top:32px;font-size:14px;color:var(--ts);font-weight:500;transition:color .2s}.btn-back:hover{color:var(--text)}.btn-back svg{width:14px;height:14px}
+
+footer{padding:24px 48px;border-top:1px solid var(--borders);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer p{font-size:12px;color:var(--tm)}
+
+@media(max-width:640px){.card{padding:36px 24px}.card h1{font-size:26px}nav,footer{padding-left:24px;padding-right:24px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nl">
+    <div class="lm"><svg viewBox="0 0 24 24" fill="none" stroke="#071018" stroke-width="2.5" stroke-linecap="round"><path d="M12 2C8 2 4 6 4 10c0 6 8 12 8 12s8-6 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="2.5" fill="#071018" stroke="none"/></svg></div>
+    <span class="lt">Löwe Smart<span> Devices</span></span>
+  </a>
+  <a href="index.html" class="back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Zurück zur Startseite
+  </a>
+</nav>
+
+<main>
+  <div class="card">
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+    </div>
+    <h1>Ihre Anfrage ist eingegangen.</h1>
+    <p>Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+    <p class="sub">Kein automatisches Mailing. Direkte Rückmeldung von uns.</p>
+
+    <div class="divider"></div>
+
+    <div class="cal-section">
+      <h2>Termin direkt buchen</h2>
+      <p>Wenn Sie möchten, können Sie auch sofort einen Termin für das Vorgespräch wählen – ohne auf unsere Rückmeldung zu warten.</p>
+
+      <!-- CALENDLY EMBED SLOT -->
+      <!-- Ersetzen Sie den folgenden Block durch Ihren Calendly-Widget-Code -->
+      <div class="cal-embed">
+        <div class="cal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <p>Calendly-Integration hier einbinden.</p>
+        <p style="margin-top:8px">Ersetzen Sie diesen Block mit:<br><code>calendly.com/ihr-kalender-link</code></p>
+      </div>
+      <!-- ENDE CALENDLY SLOT -->
+    </div>
+
+    <a href="index.html" class="btn-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Zurück zur Startseite
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Löwe Smart Devices · Hauptstraße 27, 87448 Waltenhofen</p>
+  <p>sales@loewe-smartdevices.com · +49 (0)8379 9718</p>
+</footer>
+
+</body>
+</html>

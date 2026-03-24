@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Löwe Smart Devices – Industrielle Reinigungsrobotik</title>
+<meta name="description" content="Reinigungskosten planbar machen. Personalrisiken reduzieren. Löwe Smart Devices – industrielle Reinigungsroboter für Hotels, Kliniken, Retail und Industrie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#071018;--bgs:#0b1825;--panel:#0f2032;--panel2:#132d44;--text:#eef3f8;--ts:rgba(238,243,248,0.70);--tm:rgba(238,243,248,0.42);--border:rgba(110,193,255,0.13);--borders:rgba(110,193,255,0.07);--acc:#5db8ff;--acc2:#82ccff;--adim:rgba(93,184,255,0.10);--ok:#3dd68c;--warn:#f5a623;--r:4px;--rl:8px;--t:0.2s ease;--mw:1200px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Inter Tight',sans-serif;line-height:1.08;letter-spacing:-0.022em;color:var(--text);font-weight:700}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%;height:auto}button{font-family:inherit;cursor:pointer;border:none}
+.con{max-width:var(--mw);margin:0 auto;padding:0 48px}
+.tag{display:inline-block;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);background:var(--adim);border:1px solid rgba(93,184,255,.18);padding:5px 13px;border-radius:2px;margin-bottom:18px}
+.reveal{opacity:1;transform:translateY(0);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;padding:11px 22px;border-radius:var(--r);transition:all var(--t);white-space:nowrap;cursor:pointer;text-decoration:none}
+.btn-p{background:var(--acc);color:#071018;font-weight:700}.btn-p:hover{background:var(--acc2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(93,184,255,.25)}
+.btn-g{color:var(--ts);border:1px solid var(--border);background:transparent}.btn-g:hover{color:var(--text);border-color:rgba(93,184,255,.28);background:var(--adim)}
+.btn-lg{font-size:15px;padding:14px 30px}
+.btn-ol{font-size:15px;padding:13px 29px;background:transparent;border:1px solid var(--border);color:var(--ts);border-radius:var(--r);font-family:'Inter',sans-serif;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all var(--t);text-decoration:none}.btn-ol:hover{color:var(--text);border-color:rgba(93,184,255,.28);background:var(--adim)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;background:rgba(7,16,24,.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--borders)}
+.ni{width:100%;max-width:var(--mw);margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between}
+.nl{display:flex;align-items:center;gap:10px}
+.lm{width:30px;height:30px;background:var(--acc);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.lm svg{width:16px;height:16px}
+.lt{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:15px;letter-spacing:-.02em;color:var(--text)}.lt span{color:var(--acc)}
+.nlinks{display:flex;align-items:center;gap:28px}.nlinks a{font-size:14px;font-weight:500;color:var(--ts);transition:color var(--t)}.nlinks a:hover{color:var(--text)}
+.na{display:flex;gap:10px}
+
+/* HERO */
+.hero{min-height:100vh;padding-top:64px;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:52%;height:100%;background:radial-gradient(ellipse at 80% 40%,rgba(93,184,255,.055) 0%,transparent 60%);pointer-events:none}
+.hl{display:flex;flex-direction:column;justify-content:center;padding:80px 56px 80px 48px;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);background:var(--adim);border:1px solid rgba(93,184,255,.18);padding:6px 13px;border-radius:2px;margin-bottom:28px;width:fit-content;opacity:1;animation:fu .6s .1s both}
+.eyebrow span{width:5px;height:5px;background:var(--acc);border-radius:50%;animation:blink 2.5s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(38px,4vw,64px);font-weight:800;line-height:1.04;opacity:1;animation:fu .65s .22s both}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hsub{margin-top:20px;font-size:17px;color:var(--ts);max-width:500px;line-height:1.72;font-weight:400;opacity:1;animation:fu .65s .35s both}
+.hact{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;opacity:1;animation:fu .65s .46s both}
+.hproof{display:flex;gap:36px;margin-top:52px;padding-top:36px;border-top:1px solid var(--borders);flex-wrap:wrap;opacity:1;animation:fu .65s .58s both}
+.pnum{font-family:'Inter Tight',sans-serif;font-size:26px;font-weight:800;display:block;line-height:1;color:var(--text)}
+.plbl{font-size:12px;color:var(--tm);margin-top:5px;max-width:130px;line-height:1.45}
+.pq{font-size:10px;color:var(--tm);margin-top:3px;font-style:italic;opacity:.7}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+.hr{position:relative;overflow:hidden;min-height:500px}
+.himg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.himgo{position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(7,16,24,.45) 22%,rgba(7,16,24,.1) 55%,rgba(7,16,24,.55) 85%,var(--bg) 100%)}
+/* bottom gradient for subtle fade */
+.hr::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,rgba(7,16,24,.6));pointer-events:none;z-index:2}
+.hph{position:absolute;inset:0;background:var(--panel);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:1}
+.phfile{font-family:'Inter',monospace;font-size:12px;color:var(--acc);background:var(--adim);border:1px solid rgba(93,184,255,.2);padding:4px 12px;border-radius:2px}
+.phdesc{font-size:13px;color:var(--tm);text-align:center;max-width:240px;line-height:1.55}
+.phico{width:48px;height:48px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--adim)}.phico svg{width:22px;height:22px;color:var(--acc)}
+.vbadge{position:absolute;bottom:28px;left:28px;z-index:10;display:flex;align-items:center;gap:12px;background:rgba(7,16,24,.90);border:1px solid var(--border);padding:10px 18px;backdrop-filter:blur(10px);cursor:pointer;transition:border-color var(--t);border-radius:var(--r)}.vbadge:hover{border-color:rgba(93,184,255,.3)}
+.pbtn{width:32px;height:32px;background:var(--acc);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}.pbtn svg{width:11px;height:11px;color:#071018;margin-left:2px}
+.vbl{font-size:13px;font-weight:600;color:var(--text)}.vbs{font-size:11px;color:var(--tm);margin-top:1px}
+
+/* SIGNAL BAR */
+.sbar{background:var(--panel);border-top:1px solid var(--borders);border-bottom:1px solid var(--borders);padding:14px 48px;display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap}
+.si{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:var(--ts)}.si strong{color:var(--text);font-weight:600}
+.sdot{width:5px;height:5px;background:var(--ok);border-radius:50%;flex-shrink:0}
+
+/* PAIN */
+.pain{padding:88px 0;background:var(--bgs);border-top:1px solid var(--borders);border-bottom:1px solid var(--borders)}
+.pain-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:52px}
+.ph{max-width:560px}
+.ph h2{font-size:clamp(28px,2.8vw,44px);font-weight:800;margin-bottom:14px}
+.ph p{font-size:16px;color:var(--ts);line-height:1.75;max-width:480px}
+.pain-img-wrap{position:relative;border-radius:var(--rl);overflow:hidden;aspect-ratio:16/9;background:var(--panel)}
+.pain-img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.pain-img-caption{position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(transparent,rgba(7,16,24,.72));font-size:11px;font-weight:600;letter-spacing:.1em;color:rgba(238,243,248,.85);text-transform:uppercase}
+@media(max-width:820px){.pain-top{grid-template-columns:1fr}}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--borders);border:1px solid var(--borders)}
+.pc{background:var(--bgs);padding:32px 28px;position:relative;overflow:hidden;transition:background var(--t)}.pc:hover{background:var(--panel)}
+.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--acc);transform:scaleX(0);transition:transform .35s ease;transform-origin:left}.pc:hover::before{transform:scaleX(1)}
+.pico{width:38px;height:38px;background:var(--adim);border:1px solid rgba(93,184,255,.13);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin-bottom:18px}.pico svg{width:17px;height:17px;color:var(--acc)}
+.pc h3{font-family:'Inter Tight',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.pc p{font-size:13px;color:var(--tm);line-height:1.68}
+
+/* CALC */
+.calc{padding:88px 0;background:var(--bg);position:relative;overflow:hidden}
+.calc::before{content:'';position:absolute;top:-80px;right:-160px;width:600px;height:600px;background:radial-gradient(circle,rgba(93,184,255,.04) 0%,transparent 65%);pointer-events:none}
+.clay{display:grid;grid-template-columns:1fr 1.15fr;gap:68px;align-items:start}
+.ci h2{font-size:clamp(26px,2.6vw,40px);font-weight:800;margin-bottom:16px}
+.ci p{font-size:15px;color:var(--ts);line-height:1.72;margin-bottom:12px}
+.cnote{font-size:13px;color:var(--tm);line-height:1.6;border-left:2px solid var(--border);padding-left:14px;margin-top:20px;margin-bottom:28px}
+.clist{display:flex;flex-direction:column;gap:12px}
+.crow{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--ts);line-height:1.5}.crow svg{width:15px;height:15px;color:var(--ok);flex-shrink:0;margin-top:2px}
+.ccard{background:var(--panel);border:1px solid var(--border);border-radius:var(--rl);padding:36px;position:relative}
+.ctag{position:absolute;top:-11px;left:22px;background:var(--acc);color:#071018;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 12px;border-radius:2px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.ff{display:flex;flex-direction:column;gap:6px}.ff.full{grid-column:1/-1}
+.ff label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--tm)}
+.ff input,.ff select{background:var(--bgs);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;font-weight:500;padding:10px 13px;outline:none;transition:border-color var(--t),box-shadow var(--t);width:100%;-webkit-appearance:none}
+.ff input:focus,.ff select:focus{border-color:rgba(93,184,255,.45);box-shadow:0 0 0 3px rgba(93,184,255,.07)}
+.ff input::placeholder{color:var(--tm);font-size:14px}.ff select option{background:var(--panel)}
+.cdiv{height:1px;background:var(--borders);margin:20px 0}
+.cres{display:none}.cres.on{display:block}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--borders);border:1px solid var(--borders);border-radius:var(--r);overflow:hidden;margin-bottom:14px}
+.rc{background:var(--bgs);padding:13px 15px}
+.rcl{font-size:11px;color:var(--tm);text-transform:uppercase;letter-spacing:.06em;font-weight:500;margin-bottom:3px}
+.rcv{font-family:'Inter Tight',sans-serif;font-size:16px;font-weight:700;color:var(--text)}
+.rhl{background:rgba(93,184,255,.06);border:1px solid rgba(93,184,255,.18);border-radius:var(--r);padding:18px 20px;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.rhll{font-size:13px;font-weight:600;color:var(--ts)}.rhll small{display:block;font-size:11px;font-weight:400;color:var(--tm);margin-top:2px}
+.rhlv{font-family:'Inter Tight',sans-serif;font-size:24px;font-weight:800;color:var(--acc)}
+.rnote{font-size:12px;color:var(--tm);line-height:1.6;margin-bottom:18px;padding:11px 14px;border-left:2px solid var(--border);font-style:italic}
+.rnote.good{border-left-color:var(--ok)}.rnote.neutral{border-left-color:var(--warn)}
+.ccta{width:100%;background:var(--acc);color:#071018;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;padding:14px;border-radius:var(--r);border:none;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}.ccta:hover{background:var(--acc2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(93,184,255,.22)}.ccta svg{width:15px;height:15px}
+.cempty{text-align:center;padding:24px 0 8px;color:var(--tm);font-size:13px;line-height:1.6}.cempty svg{width:28px;height:28px;color:var(--border);margin:0 auto 10px}
+
+/* PROCESS */
+.proc{padding:88px 0;background:var(--bgs);border-top:1px solid var(--borders)}
+.proc h2{font-size:clamp(26px,2.6vw,40px);font-weight:800;margin-bottom:12px}
+.ssub{font-size:16px;color:var(--ts);max-width:480px;margin-bottom:56px;line-height:1.7}
+.pgr{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--borders);border:1px solid var(--borders)}
+.ps{background:var(--bgs);padding:32px 26px;transition:background var(--t)}.ps:hover{background:var(--panel)}
+.snum{display:inline-block;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--acc);background:var(--adim);padding:3px 10px;border-radius:2px;margin-bottom:16px}
+.ps h3{font-family:'Inter Tight',sans-serif;font-size:16px;font-weight:700;margin-bottom:9px;letter-spacing:-.01em}
+.ps p{font-size:13px;color:var(--tm);line-height:1.68}
+.pmedia{margin-top:2px;background:var(--borders);display:grid;grid-template-columns:1fr 1.5fr;border:1px solid var(--borders);min-height:200px}
+.pmt{background:var(--bgs);padding:36px 32px;display:flex;flex-direction:column;justify-content:center}
+.pmt h3{font-family:'Inter Tight',sans-serif;font-size:19px;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
+.pmt p{font-size:14px;color:var(--tm);line-height:1.68}
+.pmi{background:var(--panel);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:220px}.pmi-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,16,24,.35) 0%,transparent 40%),linear-gradient(0deg,rgba(7,16,24,.4) 0%,transparent 50%);pointer-events:none;z-index:1}
+.pmi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* SEGMENTS */
+.segs{padding:88px 0;background:var(--bg);border-top:1px solid var(--borders)}
+.segs h2{font-size:clamp(26px,2.6vw,40px);font-weight:800;margin-bottom:12px}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--borders);border:1px solid var(--borders)}
+.sc{background:var(--bg);padding:32px 28px;position:relative;overflow:hidden;transition:background var(--t)}.sc:hover{background:var(--panel)}
+.sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--acc);transform:scaleX(0);transition:transform .32s ease;transform-origin:left}.sc:hover::after{transform:scaleX(1)}
+.sico{width:40px;height:40px;background:var(--adim);border:1px solid rgba(93,184,255,.13);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin-bottom:18px}.sico svg{width:18px;height:18px;color:var(--acc)}
+.sc h3{font-family:'Inter Tight',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.sc p{font-size:13px;color:var(--tm);line-height:1.68;margin-bottom:18px}
+.slev{padding-top:14px;border-top:1px solid var(--borders)}
+.sll{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:4px}
+.slv{font-family:'Inter Tight',sans-serif;font-size:17px;font-weight:700;color:var(--acc2)}
+.sln{font-size:11px;color:var(--tm);font-style:italic;margin-top:2px}
+.smedia{margin-top:2px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--borders);border:1px solid var(--borders)}
+.mt{background:var(--panel);aspect-ratio:4/3;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.mt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mtl{position:absolute;bottom:8px;left:10px;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text);background:rgba(7,16,24,.78);padding:3px 8px;backdrop-filter:blur(6px);border-radius:2px}
+.mtf{font-size:10px;color:var(--tm);font-family:monospace;background:rgba(93,184,255,.08);padding:2px 6px;border-radius:2px;position:relative;z-index:1}
+/* Real segment image grid */
+.smedia-real{margin-top:2px;display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.smt-card{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--panel)}
+.smt-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .4s ease}
+.smt-card:hover .smt-img{transform:scale(1.04)}
+.smt-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,16,24,.78) 0%,rgba(7,16,24,.1) 50%,transparent 100%);display:flex;align-items:flex-end;padding:16px}
+.smt-label{font-family:'Inter Tight',sans-serif;font-size:13px;font-weight:600;color:var(--text);letter-spacing:.02em}
+@media(max-width:820px){.smedia-real{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.smedia-real{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{padding:88px 0;background:var(--bgs);border-top:1px solid var(--borders)}
+.flay{display:grid;grid-template-columns:1fr 1.9fr;gap:72px;align-items:start}
+.fi h2{font-size:clamp(24px,2.4vw,38px);font-weight:800;margin-bottom:14px}
+.fi p{font-size:15px;color:var(--ts);line-height:1.7;margin-bottom:24px}
+.fcon{padding:18px 20px;border:1px solid var(--border);border-left:2px solid var(--acc);background:var(--panel);border-radius:var(--r)}.fcon p{font-size:13px;color:var(--ts);line-height:1.65}.fcon a{color:var(--acc);font-weight:600}
+.flist{display:flex;flex-direction:column;gap:2px}
+.fitem{background:var(--bgs);border:1px solid var(--borders);overflow:hidden;transition:border-color var(--t);border-radius:var(--r)}.fitem.open{border-color:rgba(93,184,255,.22)}
+.fq{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;cursor:pointer;font-family:'Inter Tight',sans-serif;font-size:15px;font-weight:600;color:var(--ts);transition:color var(--t);user-select:none;letter-spacing:-.01em}.fq:hover,.fitem.open .fq{color:var(--text)}
+.ftog{width:22px;height:22px;background:var(--adim);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .28s}.ftog svg{width:11px;height:11px;color:var(--acc);transition:transform .28s}.fitem.open .ftog svg{transform:rotate(45deg)}
+.fa{max-height:0;overflow:hidden;transition:max-height .38s ease}.fitem.open .fa{max-height:360px}
+.fai{padding:0 22px 22px 22px;font-size:14px;color:var(--ts);line-height:1.75;border-left:2px solid var(--acc);margin-left:22px}.fai strong{color:var(--text);font-weight:600}
+
+/* DEMO */
+.demo{padding:88px 0;background:var(--bg);border-top:1px solid var(--borders);position:relative;overflow:hidden}
+.demo::before{content:'';position:absolute;bottom:-180px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(93,184,255,.04) 0%,transparent 65%);pointer-events:none}
+.dlay{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
+.di h2{font-size:clamp(26px,2.6vw,40px);font-weight:800;margin-bottom:14px}
+.di p{font-size:15px;color:var(--ts);line-height:1.72;margin-bottom:32px}
+.dsteps{display:flex;flex-direction:column;gap:18px}
+.dstep{display:flex;gap:14px;align-items:flex-start}
+.dbadge{width:22px;height:22px;background:var(--adim);border:1px solid rgba(93,184,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--acc);flex-shrink:0;margin-top:1px}
+.dstep h4{font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px;letter-spacing:-.01em}
+.dstep p{font-size:13px;color:var(--tm)}
+.fcard{background:var(--panel);border:1px solid var(--border);border-radius:var(--rl);padding:36px}
+.fcard h3{font-family:'Inter Tight',sans-serif;font-size:19px;font-weight:700;margin-bottom:5px;letter-spacing:-.01em}
+.fsub{font-size:13px;color:var(--tm);margin-bottom:26px;line-height:1.6}
+.dr{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.df{display:flex;flex-direction:column;gap:5px}.df.full{grid-column:1/-1}
+.df label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--tm)}
+.df input,.df select,.df textarea{background:var(--bgs);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:'Inter',sans-serif;font-size:14px;padding:10px 13px;outline:none;transition:border-color var(--t),box-shadow var(--t);width:100%;-webkit-appearance:none;resize:none}
+.df input:focus,.df select:focus,.df textarea:focus{border-color:rgba(93,184,255,.42);box-shadow:0 0 0 3px rgba(93,184,255,.07)}
+.df input::placeholder,.df textarea::placeholder{color:var(--tm)}.df select option{background:var(--panel)}
+.dsub{width:100%;background:var(--acc);color:#071018;font-family:'Inter',sans-serif;font-weight:700;font-size:15px;padding:14px;border-radius:var(--r);border:none;cursor:pointer;transition:all var(--t);margin-top:18px;display:flex;align-items:center;justify-content:center;gap:8px}.dsub:hover{background:var(--acc2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(93,184,255,.22)}.dsub svg{width:15px;height:15px}
+.fdisc{font-size:11px;color:var(--tm);margin-top:11px;line-height:1.55;text-align:center}
+.demo-optional{margin-top:20px;padding:16px 18px;border:1px solid var(--borders);border-left:2px solid rgba(93,184,255,.3);background:rgba(93,184,255,.04);border-radius:var(--r)}
+.demo-opt-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin-bottom:5px}
+.demo-optional p{font-size:12px;color:var(--tm);line-height:1.6}
+
+/* FOOTER */
+footer{background:var(--bgs);border-top:1px solid var(--borders);padding:48px 0 30px}
+.ftin{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px}
+.fbrand p{font-size:13px;color:var(--tm);line-height:1.68;max-width:270px;margin-top:14px}
+.fcol h4{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:14px}
+.fcol a{display:block;font-size:13px;color:var(--ts);margin-bottom:9px;transition:color var(--t)}.fcol a:hover{color:var(--text)}
+.fcol address{font-style:normal;font-size:13px;color:var(--ts);line-height:1.75}
+.fbot{padding-top:24px;border-top:1px solid var(--borders);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fbot p{font-size:12px;color:var(--tm)}
+
+/* RESPONSIVE */
+@media(max-width:1080px){.hero{grid-template-columns:1fr}.hr{display:none}.clay,.dlay,.flay{grid-template-columns:1fr}.ftin{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.con{padding:0 24px}.ni{padding:0 24px}.nlinks{display:none}.hl{padding:56px 24px}.pgrid,.sgrid{grid-template-columns:1fr}.pgr{grid-template-columns:1fr 1fr}.smedia{grid-template-columns:1fr 1fr}.pmedia{grid-template-columns:1fr}.sbar{gap:20px;padding:14px 24px;justify-content:flex-start}.fr,.dr{grid-template-columns:1fr}.ftin{grid-template-columns:1fr;gap:28px}}
+@media(max-width:520px){.hero h1{font-size:34px}.hproof{gap:22px}.pgr{grid-template-columns:1fr}.smedia{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <a href="#" class="nl">
+      <div class="lm"><svg viewBox="0 0 24 24" fill="none" stroke="#071018" stroke-width="2.5" stroke-linecap="round"><path d="M12 2C8 2 4 6 4 10c0 6 8 12 8 12s8-6 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="2.5" fill="#071018" stroke="none"/></svg></div>
+      <span class="lt">Löwe Smart<span> Devices</span></span>
+    </a>
+    <div class="nlinks">
+      <a href="#rechner">Kosten prüfen</a>
+      <a href="#segmente">Branchen</a>
+      <a href="#prozess">Ablauf</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="na">
+      <a href="#termin" class="btn btn-g">Live-Demo ansehen</a>
+      <a href="#termin" class="btn btn-p">Fläche prüfen lassen →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hl">
+    <div class="eyebrow"><span></span>Industrielle Reinigungsrobotik</div>
+    <h1>Reinigungskosten,<br>die sich <em>planen</em> lassen.</h1>
+    <p class="hsub">Personalabhängigkeit reduzieren.<br>Planbare Kosten.<br>Konstante Reinigung – jeden Tag.</p>
+    <div class="hact">
+      <a href="#termin" class="btn btn-p btn-lg">Fläche prüfen lassen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#rechner" class="btn-ol">ROI berechnen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="hproof">
+      <div><span class="pnum">40–65 %</span><div class="plbl">Typische Kosteneinsparung</div><div class="pq">je nach Objekt und Ausgangslage</div></div>
+      <div><span class="pnum">8–18 Monate</span><div class="plbl">Amortisation möglich</div><div class="pq">abhängig von Fläche und Frequenz</div></div>
+      <div><span class="pnum">24/7 Betrieb</span><div class="plbl">Ohne Personalausfälle</div></div>
+    </div>
+  </div>
+  <div class="hr">
+    <img class="himg" src="hero-robot-main.jpg" alt="Reinigungsroboter im Einsatz" id="himg" onerror="document.getElementById('himg').style.display='none'">
+    <div class="himgo"></div>
+    <div class="hph" id="hph" style="display:none">
+      <div class="phico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="21" r="1"/><circle cx="16" cy="21" r="1"/><line x1="8" y1="17" x2="8" y2="21"/><line x1="16" y1="17" x2="16" y2="21"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+      <span class="phfile">hero-robot-main.jpg</span>
+      <p class="phdesc">Reinigungsroboter in realer Umgebung.</p>
+    </div>
+    <div class="vbadge">
+      <div class="pbtn"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></div>
+      <div><div class="vbl">Demo ansehen</div><div class="vbs">hero-demo-video.mp4 · ca. 90 Sek.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sbar">
+  <div class="si"><div class="sdot"></div><span><strong>Keine Konzepte.</strong> Robotik im echten Betrieb.</span></div>
+  <div class="si"><div class="sdot"></div><span><strong>Service &amp; Wartung</strong> über zertifizierten Partner.</span></div>
+  <div class="si"><div class="sdot"></div><span><strong>Demo vor Ort</strong> auf Ihrer Fläche.</span></div>
+  <div class="si"><div class="sdot"></div><span><strong>Individuelle Kalkulation</strong> statt Pauschalen.</span></div>
+</div>
+
+<section class="pain">
+  <div class="con">
+
+    <!-- Header + Bild nebeneinander -->
+    <div class="pain-top reveal">
+      <div class="ph">
+        <div class="tag">Das eigentliche Problem</div>
+        <h2>Reinigung ist ein Personalproblem.<br>Und vor allem ein Kostenproblem.</h2>
+        <p>Viele Unternehmen behandeln Reinigung wie eine reine Organisationsfrage. Doch am Ende entscheidet etwas anderes: Was kostet Sie Reinigung jedes Jahr – und wie zuverlässig funktioniert sie wirklich?</p>
+      </div>
+      <div class="pain-img-wrap">
+        <img src="problem-manual-cleaning.jpg" alt="Putzwagen im Büroflur – manuelle Reinigung" class="pain-img" onerror="this.parentElement.style.display='none'">
+        <div class="pain-img-caption">Manuell. Aufwendig. Jeden Tag.</div>
+      </div>
+    </div>
+
+    <div class="pgrid">
+      <div class="pc reveal"><div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/><polyline points="17,6 23,6 23,12"/></svg></div><h3>Lohnkosten steigen jedes Jahr</h3><p>Mindestlohn steigt. Nebenkosten steigen. Ihr Reinigungsbudget wächst – egal wie Ihr Geschäft läuft.</p></div>
+      <div class="pc reveal d1"><div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></div><h3>Personal kommt und geht</h3><p>Jede Kündigung bedeutet Einarbeitung, Qualitätslücken und neue Kosten. Gutes Reinigungspersonal zu halten wird immer schwieriger.</p></div>
+      <div class="pc reveal d2"><div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Krankheit stoppt Abläufe</h3><p>Kurzfristige Absagen bringen den Plan durcheinander. Vertretungen sind teuer – oder gar nicht verfügbar.</p></div>
+      <div class="pc reveal"><div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h3>Qualität ist nicht konstant</h3><p>Mal gründlich, mal oberflächlich. Das Ergebnis hängt vom Tag und der Person ab.</p></div>
+      <div class="pc reveal d1"><div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><h3>Früh- und Nachtschichten kosten extra</h3><p>Wochenenden und Randzeiten treiben die Kosten stark nach oben. Gerade dann, wenn Reinigung eigentlich nötig ist.</p></div>
+      <div class="pc reveal d2"><div class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div><h3>Organisation frisst Zeit</h3><p>Dienstpläne, Urlaube, Krankmeldungen – der Aufwand wächst, ohne dass die Fläche sauberer wird.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="calc" id="rechner">
+  <div class="con">
+    <div class="clay">
+      <div class="ci reveal">
+        <div class="tag">Kostenkalkulation</div>
+        <h2>Was kostet Sie Ihre Reinigung wirklich – jedes Jahr?</h2>
+        <p>Die meisten kennen ihren Stundenlohn.<br>Aber nicht die echten Gesamtkosten.<br>Lohnnebenkosten, Ausfälle und Organisation<br>machen Reinigung deutlich teurer als gedacht.</p>
+        <div class="cnote">Diese Berechnung zeigt eine realistische erste Einschätzung.<br>Die finale Kalkulation erfolgt individuell.</div>
+        <div class="clist">
+          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Nebenkosten automatisch berücksichtigt</div>
+          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Passendes System wird vorgeschlagen</div>
+          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Unwirtschaftliche Fälle werden ehrlich gezeigt</div>
+          <div class="crow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Kauf oder Leasing möglich</div>
+        </div>
+      </div>
+      <div class="ccard reveal d1">
+        <div class="ctag">ROI-Rechner</div>
+        <div class="fr">
+          <div class="ff"><label>Zu reinigende Fläche (m²)</label><input type="number" id="c-f" placeholder="z. B. 1.500" min="100" oninput="rc()"></div>
+          <div class="ff"><label>Reinigungstage pro Woche</label><select id="c-t" onchange="rc()"><option value="5">5 Tage (Mo–Fr)</option><option value="6">6 Tage (Mo–Sa)</option><option value="7">7 Tage</option><option value="3">3 Tage</option></select></div>
+        </div>
+        <div class="fr">
+          <div class="ff"><label>Reinigungsstunden pro Tag</label><input type="number" id="c-s" placeholder="z. B. 4" min="0.5" step="0.5" oninput="rc()"></div>
+          <div class="ff"><label>Anzahl Reinigungskräfte</label><input type="number" id="c-p" placeholder="z. B. 2" min="1" oninput="rc()"></div>
+        </div>
+        <div class="fr">
+          <div class="ff"><label>Stundenlohn brutto (€)</label><input type="number" id="c-l" placeholder="z. B. 14,50" min="12" step="0.5" oninput="rc()"></div>
+          <div class="ff"><label>Finanzierungsart</label><select id="c-m" onchange="rc()"><option value="kauf">Kauf</option><option value="leasing">Leasing / Miete</option></select></div>
+        </div>
+        <div class="cdiv"></div>
+        <div class="cres" id="cres">
+          <div class="rgrid">
+            <div class="rc"><div class="rcl">Personalkosten / Monat</div><div class="rcv" id="rm">–</div></div>
+            <div class="rc"><div class="rcl">Personalkosten / Jahr</div><div class="rcv" id="rj">–</div></div>
+            <div class="rc"><div class="rcl">Empfohlenes System</div><div class="rcv" id="rsys">–</div></div>
+            <div class="rc"><div class="rcl">Systemkosten</div><div class="rcv" id="ri">–</div></div>
+          </div>
+          <div class="rhl">
+            <div class="rhll" id="rhl-label">Ihre mögliche Ersparnis pro Jahr<small>Schätzung – abhängig von Flächeneignung</small></div>
+            <div class="rhlv" id="re">–</div>
+          </div>
+          <div class="rnote" id="rn"></div>
+          <a href="#termin" class="ccta">Fläche prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="cempty" id="cemp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="7" y1="8" x2="7" y2="12"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="17" y1="10" x2="17" y2="12"/></svg>
+          Felder ausfüllen, um Ihre Grobkalkulation zu sehen.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="prozess">
+  <div class="con">
+    <div class="tag reveal">Unser Prozess</div>
+    <h2 class="reveal">Von der Flächenprüfung zum laufenden Roboter.</h2>
+    <p class="ssub reveal">Ein klarer Ablauf – von der Prüfung Ihrer Fläche bis zum autonomen Betrieb.</p>
+    <div class="pgr">
+      <div class="ps reveal"><div class="snum">01 Flächenprüfung</div><h3>Flächenprüfung</h3><p>Wir prüfen Ihre Fläche und Rahmenbedingungen. Z.&thinsp;B. Wasseranschluss, Wegeführung und Hindernisse.</p></div>
+      <div class="ps reveal d1"><div class="snum">02 Einsatzkonzept</div><h3>Einsatzkonzept</h3><p>Auf Basis Ihrer Fläche erstellen wir ein passendes Einsatzkonzept inkl. Robotertyp und Reinigungslogik.</p></div>
+      <div class="ps reveal d2"><div class="snum">03 Wirtschaftlichkeit</div><h3>Wirtschaftlichkeitsberechnung</h3><p>Sie erhalten eine realistische ROI-Berechnung auf Basis Ihrer tatsächlichen Kosten.</p></div>
+      <div class="ps reveal d3"><div class="snum">04 Einrichtung &amp; Start</div><h3>Einrichtung &amp; Start</h3><p>Installation, Mapping und Einweisung – meist innerhalb eines Tages betriebsbereit.</p></div>
+    </div>
+    <div class="pmedia reveal">
+      <div class="pmt">
+        <h3>Setup meist innerhalb eines Tages</h3>
+        <p>Kein Umbau notwendig. Ein Techniker richtet den Roboter ein und schult Ihren Ansprechpartner.</p>
+      </div>
+      <div class="pmi">
+        <img src="setup-technician.jpg" alt="Techniker richtet Reinigungsroboter ein" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        <div class="pmi-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="segs" id="segmente">
+  <div class="con">
+    <div class="tag reveal">Branchen</div>
+    <h2 class="reveal" style="margin-bottom:12px">Wo sich Reinigungsrobotik wirklich rechnet.</h2>
+    <p class="ssub reveal">Nicht jede Fläche ist geeignet. Aber in vielen Bereichen ist Robotik heute wirtschaftlich sinnvoll.</p>
+    <div class="sgrid">
+      <div class="sc reveal"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div><h3>Hotels &amp; Ferienanlagen</h3><p>Große Flächen mit täglichem Reinigungsbedarf. Sauberkeit ist sichtbar – für jeden Gast.</p><div class="slev"><div class="sll">Typische Ersparnis</div><div class="slv">15.000–40.000 € / Jahr</div></div></div>
+      <div class="sc reveal d1"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Gebäudedienstleister</h3><p>Ein Roboter ersetzt wiederkehrende Handarbeit und erhöht Ihre Marge pro Objekt.</p><div class="slev"><div class="sll">Typischer Hebel pro Objekt</div><div class="slv">8.000–25.000 € / Jahr</div></div></div>
+      <div class="sc reveal d2"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div><h3>Kliniken &amp; Pflege</h3><p>Hohe Hygieneanforderungen bei gleichzeitigem Personalmangel.</p><div class="slev"><div class="sll">Typische Ersparnis</div><div class="slv">20.000–50.000 € / Jahr</div></div></div>
+      <div class="sc reveal"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div><h3>Retail &amp; Einkaufszentren</h3><p>Große Flächen, hohe Besucherfrequenz und teure Nachtreinigung.</p><div class="slev"><div class="sll">Typische Ersparnis</div><div class="slv">30.000–80.000 € / Jahr</div></div></div>
+      <div class="sc reveal d1"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>Industrie &amp; Logistik</h3><p>Großflächen mit wiederkehrenden Reinigungszyklen – ideal für automatisierte Systeme.</p><div class="slev"><div class="sll">Typische Ersparnis</div><div class="slv">40.000–120.000 € / Jahr</div></div></div>
+      <div class="sc reveal d2"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="16" r="1"/><circle cx="20" cy="16" r="1"/></svg></div><h3>Autohäuser &amp; Showrooms</h3><p>Saubere Präsentationsflächen ohne zusätzlichen Personalaufwand.</p><div class="slev"><div class="sll">Typische Ersparnis</div><div class="slv">10.000–20.000 € / Jahr</div></div></div>
+    </div>
+
+    <!-- Branchen-Bildergrid mit echten Fotos -->
+    <div class="smedia-real">
+      <div class="smt-card">
+        <!-- Hotel: Roboter rechts im Bild, Blickwinkel leicht von vorne -->
+        <img src="usecase-hotel.jpg" alt="Reinigungsroboter im Hotel" class="smt-img" style="object-position:60% center">
+        <div class="smt-overlay"><div class="smt-label">Hotels &amp; Ferienanlagen</div></div>
+      </div>
+      <div class="smt-card">
+        <!-- Klinik: Roboter links, Krankenschwester im Hintergrund, niedrige Kamerahöhe -->
+        <img src="usecase-clinic.jpg" alt="Reinigungsroboter in der Klinik" class="smt-img" style="object-position:35% 55%">
+        <div class="smt-overlay"><div class="smt-label">Kliniken &amp; Pflege</div></div>
+      </div>
+      <div class="smt-card">
+        <!-- Retail: Roboter mittig-links, Mall-Gang sichtbar -->
+        <img src="usecase-retail.jpg" alt="Reinigungsroboter im Einkaufszentrum" class="smt-img" style="object-position:45% center">
+        <div class="smt-overlay"><div class="smt-label">Retail &amp; Einkaufszentren</div></div>
+      </div>
+      <div class="smt-card">
+        <!-- Industrie: Roboter zentral von vorne, Lagerhalle-Tiefe sichtbar -->
+        <img src="usecase-industry.jpg" alt="Reinigungsroboter in Industriehalle" class="smt-img" style="object-position:50% 40%">
+        <div class="smt-overlay"><div class="smt-label">Industrie &amp; Logistik</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="con">
+    <div class="flay">
+      <div class="fi reveal">
+        <div class="tag">Häufige Fragen</div>
+        <h2>Was Entscheider fragen.</h2>
+        <p>Diese Fragen stellen uns Entscheider vor einer Investition am häufigsten. Hier finden Sie klare Antworten.</p>
+        <div class="fcon"><p>Weitere Fragen?<br><a href="#termin">Fläche unverbindlich prüfen lassen →</a></p></div>
+      </div>
+      <div class="flist reveal d1">
+        <div class="fitem" onclick="tf(this)"><div class="fq">Funktioniert das auf unserer Fläche überhaupt?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Das prüfen wir vor jeder Entscheidung gemeinsam. Wir analysieren Ihre Fläche, Wegeführung und Infrastruktur (z. B. Wasseranschluss und Reinigungsbereiche).<br><br><strong>Wenn Ihre Fläche nicht geeignet ist, sagen wir das offen.</strong> Nicht jede Fläche ist sinnvoll automatisierbar – und genau deshalb prüfen wir das zuerst.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Was kostet der Betrieb wirklich?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Die wichtigste Zahl ist nicht der Kaufpreis, sondern Ihre heutigen Reinigungskosten.<br><br><strong>Typische Investition:</strong> 9.000–24.000 € (Kauf) oder Leasing ab ca. 200–500 € pro Monat.<br><strong>Jährliche Wartung:</strong> ca. 600–1.400 €.<br><br>Die entscheidende Frage: Wie viel geben Sie heute jedes Jahr für Reinigung aus? Genau das zeigt Ihnen unser ROI-Rechner.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Wie schnell lohnt sich der Einsatz?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">In vielen Fällen amortisiert sich der Roboter innerhalb von <strong>8–18 Monaten</strong>. Das hängt vor allem ab von:<br><br>· Flächengröße<br>· Reinigungsfrequenz<br>· Personalkosten<br><br>Mit unserem ROI-Rechner erhalten Sie sofort eine erste Einschätzung.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Was passiert bei einem Ausfall?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Service und Wartung erfolgen über zertifizierte Partner. Sie erhalten:<br><br>· feste Ansprechpartner<br>· definierte Reaktionszeiten<br>· geplante Wartungsintervalle<br><br><strong>Ein technischer Ausfall ist planbar. Personalausfälle sind es nicht.</strong></div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Wie viel Betreuung ist im Alltag nötig?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Nach der Einrichtung arbeitet der Roboter weitgehend autonom. Im Alltag reicht:<br><br>· Schmutzbehälter prüfen<br>· Tank kontrollieren<br>· Start bestätigen<br><br><strong>Zeitaufwand: meist unter 10 Minuten pro Tag.</strong></div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Wie lange dauert die Einrichtung?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai"><strong>In der Regel 4–8 Stunden.</strong> Ein Techniker kommt zu Ihnen, kartiert die Fläche und richtet die Reinigungsrouten ein.<br><br>Kein IT-Eingriff. Kein Umbau. Am selben Tag betriebsbereit.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Müssen wir Personal abbauen?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Nein. Das entscheiden Sie. Der Roboter übernimmt wiederkehrende Reinigungsflächen. Ihr Personal kann für andere Aufgaben eingesetzt werden.<br><br><strong>Es gibt keinen erzwungenen Stellenabbau.</strong> Oft werden frei werdende Kapazitäten bei natürlicher Fluktuation nicht neu besetzt.</div></div></div>
+        <div class="fitem" onclick="tf(this)"><div class="fq">Können wir das System auch leasen?<div class="ftog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="fa"><div class="fai">Ja. Neben dem Kauf ist Leasing möglich. Viele Unternehmen wählen Leasing, um Investitionen planbar zu machen.<br><br>Die monatlichen Kosten liegen je nach System typisch zwischen <strong>200 und 500 €</strong>.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="termin">
+  <div class="con">
+    <div class="dlay">
+      <div class="di reveal">
+        <div class="tag">Flächenprüfung anfragen</div>
+        <h2>Flächenprüfung &amp; Kostenanalyse.</h2>
+        <p>Der erste Schritt ist eine Prüfung Ihrer Fläche – ohne Verpflichtung. Darauf aufbauend erhalten Sie eine individuelle Wirtschaftlichkeitsanalyse.</p>
+        <div class="dsteps">
+          <div class="dstep"><div class="dbadge">1</div><div><h4>Flächenprüfung</h4><p>Wir analysieren Ihre Fläche, Reinigungsrouten und Infrastruktur. Kostenlos und unverbindlich.</p></div></div>
+          <div class="dstep"><div class="dbadge">2</div><div><h4>Wirtschaftlichkeitsanalyse</h4><p>Auf Basis Ihrer echten Kosten erhalten Sie eine individuelle ROI-Berechnung.</p></div></div>
+          <div class="dstep"><div class="dbadge">3</div><div><h4>Live-Demo (optional)</h4><p>Besuchen Sie unser Demo-Gelände in Kempten oder sehen Sie den Roboter per Videoschaltung.</p></div></div>
+        </div>
+      </div>
+      <div class="fcard reveal d1">
+        <h3>Flächenprüfung &amp; Kostenanalyse anfragen</h3>
+        <p class="fsub">Wir prüfen Ihre Fläche und erstellen eine individuelle Wirtschaftlichkeitsanalyse. Kostenlos, unverbindlich, binnen 24 Stunden.</p>
+        <div class="dr"><div class="df"><label>Vorname *</label><input type="text" placeholder="Max" required></div><div class="df"><label>Nachname *</label><input type="text" placeholder="Mustermann" required></div></div>
+        <div class="dr"><div class="df full"><label>Unternehmen *</label><input type="text" placeholder="Firma GmbH" required></div></div>
+        <div class="dr"><div class="df"><label>Geschäftliche E-Mail *</label><input type="email" placeholder="m.mustermann@firma.de" required></div><div class="df"><label>Telefon *</label><input type="tel" placeholder="+49 ..." required></div></div>
+        <div class="dr"><div class="df full"><label>Branche / Objekttyp</label><select><option value="">Bitte wählen …</option><option>Hotel / Ferienanlage</option><option>Klinik / Pflege</option><option>Gebäudedienstleister</option><option>Retail / Einkaufszentrum</option><option>Industrie / Logistik</option><option>Autohaus / Showroom</option><option>Bürofläche</option><option>Sonstiges</option></select></div></div>
+        <div class="dr"><div class="df full"><label>Kurze Flächenbeschreibung</label><textarea rows="3" placeholder="z. B. Hotellobbys + Flure, ca. 2.000 m², tägliche Reinigung, aktuell 2 Reinigungskräfte …"></textarea></div></div>
+        <button class="dsub" onclick="hs()">Fläche prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <p class="fdisc">Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
+        <div class="demo-optional">
+          <div class="demo-opt-label">Live-Demo optional</div>
+          <p>Besuchen Sie unser Demo-Gelände in Kempten oder sehen Sie den Roboter per Videoschaltung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="con">
+    <div class="ftin">
+      <div class="fbrand">
+        <div class="nl"><div class="lm" style="width:26px;height:26px"><svg viewBox="0 0 24 24" fill="none" stroke="#071018" stroke-width="2.5" stroke-linecap="round" width="14" height="14"><path d="M12 2C8 2 4 6 4 10c0 6 8 12 8 12s8-6 8-12c0-4-4-8-8-8z"/><circle cx="12" cy="10" r="2.5" fill="#071018" stroke="none"/></svg></div><span class="lt">Löwe Smart<span> Devices</span></span></div>
+        <p>Industrielle Reinigungsrobotik für planbare Betriebskosten. Vertrieb und Service für Deutschland und darüber hinaus.</p>
+      </div>
+      <div class="fcol"><h4>Navigation</h4><a href="#rechner">Kosten prüfen</a><a href="#segmente">Branchen</a><a href="#prozess">Ablauf</a><a href="#faq">FAQ</a><a href="#termin">Live-Demo anfragen</a></div>
+      <div class="fcol"><h4>Kontakt</h4><a href="https://www.loewe-smartdevices.com" target="_blank" rel="noopener">loewe-smartdevices.com</a><a href="/cdn-cgi/l/email-protection#4f3c2e232a3c0f23202a382a623c222e3d3b2b2a39262c2a3c612c2022"><span class="__cf_email__" data-cfemail="e192808d8492a18d8e849684cc928c80939585849788828492cf828e8c">[email&#160;protected]</span></a><a href="tel:+4983799718">+49 (0)8379 9718</a></div>
+      <div class="fcol"><h4>Impressum</h4><address>Löwe Smart Devices<br>Hauptstraße 27<br>87448 Waltenhofen<br>Deutschland<br><br>Inhaber: Harald Löwe<br>USt-ID: DE812186019<br>St.-Nr.: 127/246/10194<br><br>IHK Schwaben<br>Aufsicht: Reg. Schwaben</address></div>
+    </div>
+    <div class="fbot"><p>© 2025 Löwe Smart Devices · Alle Rechte vorbehalten</p><p>Verantwortlich gem. § 10 MDStV: Harald Löwe</p></div>
+  </div>
+</footer>
+
+<script>
+/* REVEAL - elements visible by default, no JS hiding */
+
+/* Hero image */
+const him=document.getElementById('himg');
+if(him){him.addEventListener('load',()=>{const p=document.getElementById('hph');if(p)p.style.display='none'});}
+
+/* FAQ */
+function tf(el){const o=el.classList.contains('open');document.querySelectorAll('.fitem').forEach(i=>i.classList.remove('open'));if(!o)el.classList.add('open');}
+
+/* CALCULATOR */
+const fmt=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
+function rc(){
+  const f=parseFloat(document.getElementById('c-f').value)||0;
+  const t=parseFloat(document.getElementById('c-t').value)||5;
+  const s=parseFloat(document.getElementById('c-s').value)||0;
+  const p=parseFloat(document.getElementById('c-p').value)||0;
+  const l=parseFloat(document.getElementById('c-l').value)||0;
+  const m=document.getElementById('c-m').value;
+  const re=document.getElementById('cres'),em=document.getElementById('cemp');
+  if(!f||!s||!p||!l){re.classList.remove('on');em.style.display='block';return;}
+  const ag=l*1.35,stm=s*p*t*4.33,km=ag*stm,kj=km*12;
+  let sys,rp,wj;
+  if(f<800){sys='Kompaktsystem';rp=9500;wj=650;}
+  else if(f<3000){sys='Mittelklassesystem';rp=14500;wj=900;}
+  else if(f<8000){sys='Profisystem';rp=19000;wj=1100;}
+  else{sys='Industriesystem';rp=24000;wj=1400;}
+  const lmo=Math.round(rp/48*1.18);
+  const rj2=m==='leasing'?lmo*12+wj:rp+wj;
+  const sub=0.65,eb=kj*sub,en=eb-rj2,am=Math.round(rp/(km*sub));
+  document.getElementById('rm').textContent=fmt(km);
+  document.getElementById('rj').textContent=fmt(kj);
+  document.getElementById('rsys').textContent=sys;
+  document.getElementById('ri').textContent=m==='leasing'?fmt(lmo)+' / Mo. + '+fmt(wj)+' Wartung':fmt(rp)+' + '+fmt(wj)+' / J.';
+  const ev=document.getElementById('re');
+  if(en>0){ev.textContent=fmt(en);ev.style.color='var(--acc)';}
+  else{ev.textContent='Amortisation ab Jahr 2';ev.style.color='var(--warn)';}
+  const ne=document.getElementById('rn');
+  if(en>8000){document.getElementById('rhl-label').innerHTML='Ihre mögliche Ersparnis pro Jahr<small>Schätzung – abhängig von Flächeneignung</small>';ne.className='rnote good';ne.innerHTML='<strong>Einschätzung:</strong> Der Einsatz eines Roboters ist wirtschaftlich sinnvoll. Eine Demo vor Ort ist der nächste sinnvolle Schritt.';}
+  else if(en>0){document.getElementById('rhl-label').innerHTML='Amortisation voraussichtlich ab Jahr 2<small>Schätzung – abhängig von Flächeneignung</small>';ne.className='rnote neutral';ne.innerHTML='<strong>Einschätzung:</strong> Der wirtschaftliche Vorteil entsteht mittelfristig. Im Gespräch prüfen wir alternative Szenarien (z. B. Leasing).';}
+  else{document.getElementById('rhl-label').innerHTML='Amortisation voraussichtlich ab Jahr 2<small>Schätzung – abhängig von Flächeneignung</small>';ne.className='rnote neutral';ne.innerHTML='<strong>Einschätzung:</strong> Der wirtschaftliche Vorteil entsteht mittelfristig. Im Gespräch prüfen wir alternative Szenarien (z. B. Leasing).';}
+  re.classList.add('on');em.style.display='none';
+}
+
+/* FORM SUBMIT */
+function hs(){
+  const fs=document.querySelectorAll('.fcard input[required]');
+  let ok=true;
+  fs.forEach(x=>{if(!x.value.trim()){x.style.borderColor='rgba(245,166,35,.55)';ok=false;}else{x.style.borderColor='';}});
+  if(ok)window.location.href='thank-you.html';
+}
+</script>
+</body>
+</html>
