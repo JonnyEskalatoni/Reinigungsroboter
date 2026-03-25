@@ -235,6 +235,110 @@ footer{background:var(--bgs);border-top:1px solid var(--borders);padding:48px 0 
 .smedia-3 .smt-card{aspect-ratio:16/9}
 @media(max-width:820px){.sgrid-3{grid-template-columns:1fr 1fr}.smedia-3{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.sgrid-3{grid-template-columns:1fr}.smedia-3{grid-template-columns:1fr}}
+
+/* ═══════════════════════════════════════════
+   MOBILE OPTIMIERUNG — max-width: 480px
+   Nur Hero-Section + Header
+═══════════════════════════════════════════ */
+@media(max-width:480px){
+
+  /* 1 ── HEADER ────────────────────────────
+     - "Live-Demo ansehen" ausblenden
+     - nur 1 CTA sichtbar
+     - kein Abschneiden                      */
+  .ni{padding:0 16px}
+  .na .btn-g{display:none}
+  .na .btn-p{
+    font-size:12px;
+    padding:8px 14px;
+    white-space:nowrap;
+    max-width:calc(100vw - 200px)
+  }
+
+  /* 2 ── HERO TEXTCONTAINER ─────────────── */
+  .hl{
+    padding:80px 20px 40px 20px;
+    min-height:auto;
+    max-width:100%;
+    width:100%
+  }
+
+  /* 3 ── HEADLINE ──────────────────────── */
+  .hero h1{
+    font-size:clamp(26px,7.5vw,36px);
+    line-height:1.12;
+    letter-spacing:-0.018em
+  }
+
+  /* 4 ── SUBLINE ──────────────────────── */
+  .hsub{
+    font-size:15px;
+    line-height:1.65;
+    margin-top:14px;
+    max-width:100%
+  }
+
+  /* 5 ── CTA BUTTONS ──────────────────── */
+  .hact{
+    flex-direction:column;
+    gap:10px;
+    margin-top:24px
+  }
+  .hact .btn-p,.hact .btn-ol{
+    width:100%;
+    justify-content:center;
+    font-size:14px;
+    padding:13px 20px
+  }
+
+  /* 6 ── KPI ZEILE ────────────────────── 
+     Demo-Button ausblenden
+     KPIs: 2+1 oder untereinander         */
+  .hproof{
+    flex-wrap:wrap;
+    gap:0;
+    margin-top:28px;
+    padding-top:20px
+  }
+  .hproof-demo{display:none}
+  .hproof-kpis{
+    flex-wrap:wrap;
+    gap:0;
+    width:100%
+  }
+  .hproof-kpis>div{
+    flex:0 0 50%;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    padding:14px 0 14px 0;
+    padding-right:0 !important
+  }
+  .hproof-kpis>div:nth-child(1){
+    border-right:1px solid rgba(255,255,255,.1);
+    padding-right:12px !important
+  }
+  .hproof-kpis>div:nth-child(3){
+    flex:0 0 100%;
+    border-bottom:none;
+    border-right:none;
+    padding-top:14px
+  }
+  .pnum{font-size:20px}
+  .plbl{font-size:10px;max-width:100%}
+
+}
+/* ═══════════════════════════════════════════ */
+
+@media(max-width:480px){
+  .himgo{background:
+    linear-gradient(to bottom,
+      rgba(10,22,36,0.82) 0%,
+      rgba(10,22,36,0.70) 45%,
+      rgba(10,22,36,0.50) 70%,
+      rgba(10,22,36,0.20) 100%
+    )
+  }
+}
 </style>
 </head>
 <body>
