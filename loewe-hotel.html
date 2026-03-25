@@ -245,6 +245,13 @@ footer{background:var(--bgs);border-top:1px solid var(--borders);padding:48px 0 
   transition:all .2s ease;text-decoration:none}
 .hproof-demo:hover{color:#fff;border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.1)}
 .hproof-demo svg{flex-shrink:0}
+
+/* ── 3er Bereiche-Grid ── */
+.sgrid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--borders);border:1px solid var(--borders);border-radius:var(--rl);overflow:hidden;margin-bottom:3px}
+.smedia-3{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.smedia-3 .smt-card{aspect-ratio:16/9}
+@media(max-width:820px){.sgrid-3{grid-template-columns:1fr 1fr}.smedia-3{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.sgrid-3{grid-template-columns:1fr}.smedia-3{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -452,61 +459,14 @@ footer{background:var(--bgs);border-top:1px solid var(--borders);padding:48px 0 
 <!-- HOTEL-BEREICHE (statt generischer Branchen) -->
 <section class="segs" id="bereiche">
   <div class="con">
-    <div class="tag reveal">Einsatzbereiche im Hotel</div>
-    <h2 class="reveal" style="margin-bottom:12px">Diese Hotelbereiche profitieren wirtschaftlich am meisten.</h2>
-    <p class="ssub reveal">Nicht jede Fläche ist gleich gut geeignet. Diese Bereiche zeigen den größten wirtschaftlichen Effekt.</p>
-    <div class="sgrid">
-      <div class="sc reveal">
-        <div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div>
-        <h3>Lobby &amp; Eingangsbereich</h3>
-        <p>Hohe Gäste-Frequenz und sichtbare Fläche. Genau hier entsteht der erste Eindruck. Konstante Sauberkeit wirkt direkt auf Bewertungen.</p>
-        <div class="slev"><div class="sll">Reinigungshäufigkeit</div><div class="slv">Täglich, oft mehrfach</div></div>
-      </div>
-      <div class="sc reveal d1">
-        <div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg></div>
-        <h3>Flure &amp; Etagen</h3>
-        <p>Lange, gleichmäßige Flächen. Ideal für automatisierte Reinigung in der Nacht oder vor Gästezeiten.</p>
-        <div class="slev"><div class="sll">Bestes Zeitfenster</div><div class="slv">Nacht / Frühdienst</div></div>
-      </div>
-      <div class="sc reveal d2">
-        <div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
-        <h3>Tagungsbereiche &amp; Konferenz</h3>
-        <p>Große Flächen mit wechselnder Nutzung. Reinigung zwischen Veranstaltungen lässt sich exakt planen.</p>
-        <div class="slev"><div class="sll">Typische Fläche</div><div class="slv">200–1.000 m²</div></div>
-      </div>
-      <div class="sc reveal">
-        <div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
-        <h3>Restaurant- &amp; Frühstücksbereich</h3>
-        <p>Nach dem Frühstück entstehen große Reinigungsflächen. Automatisierte Reinigung entlastet das Team direkt nach Servicezeiten.</p>
-        <div class="slev"><div class="sll">Reinigungsfenster</div><div class="slv">Täglich nach Service</div></div>
-      </div>
-      <div class="sc reveal d1">
-        <div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3>Wellnessbereiche &amp; SPA</h3>
-        <p>Hohe Hygieneanforderungen erfordern konstant gleiche Reinigungsqualität. Unabhängig von Personalverfügbarkeit.</p>
-        <div class="slev"><div class="sll">Besonderheit</div><div class="slv">Hoher Hygienestandard</div></div>
-      </div>
-      <div class="sc reveal d2">
-        <div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
-        <h3>Saisonbetriebe &amp; Ferienanlagen</h3>
-        <p>In der Hochsaison steigt der Bedarf, während Personal knapp wird. Robotik stabilisiert den Betrieb in genau diesen Phasen.</p>
-        <div class="slev"><div class="sll">Größter Hebel</div><div class="slv">Hochsaison-Absicherung</div></div>
-      </div>
+    <div class="tag reveal">Einsatzbereiche</div>
+    <h2 class="reveal" style="margin-bottom:12px">Diese Bereiche profitieren besonders von automatisierter Reinigung.</h2>
+    <p class="ssub reveal">Wiederkehrende Flächen mit konstantem Bedarf zeigen den größten wirtschaftlichen Effekt.</p>
+    <div class="sgrid-3">
+<div class="sc reveal"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div><h3>Lobbybereiche</h3><p>Hochfrequentierte und repräsentative Flächen – Sauberkeit direkt sichtbar.</p><div class="slev"><div class="sll">Charakteristik</div><div class="slv">Repräsentativ</div></div></div><div class="sc reveal d1"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg></div><h3>Flure</h3><p>Wiederkehrende tägliche Nutzung durch Gäste – konstanter Reinigungsbedarf.</p><div class="slev"><div class="sll">Charakteristik</div><div class="slv">Täglich genutzt</div></div></div><div class="sc reveal d2"><div class="sico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><h3>Frühstücksbereiche</h3><p>Regelmäßige Verschmutzung zu festen Zeiten – ideal für geplante Zyklen.</p><div class="slev"><div class="sll">Charakteristik</div><div class="slv">Planbar</div></div></div>
     </div>
-    <!-- Hotel-spezifische Bilder -->
-    <div class="smedia-real">
-      <div class="smt-card">
-        <img src="usecase-hotel.jpg" alt="Reinigungsroboter in Hotel-Lobby" class="smt-img" style="object-position:75% center" onerror="this.parentElement.style.background:'var(--panel)'">
-        <div class="smt-overlay"><div class="smt-label">Hotel-Lobby</div></div>
-      </div>
-      <div class="smt-card">
-        <img src="hero-robot-main.jpg" alt="Reinigungsroboter im Showroom" class="smt-img" style="object-position:center 30%" onerror="this.parentElement.style.background:'var(--panel)'">
-        <div class="smt-overlay"><div class="smt-label">Präsentationsfläche</div></div>
-      </div>
-      <div class="smt-card">
-        <img src="usecase-retail.jpg" alt="Reinigungsroboter im Tagungsbereich" class="smt-img" style="object-position:45% center" onerror="this.parentElement.style.background:'var(--panel)'">
-        <div class="smt-overlay"><div class="smt-label">Veranstaltungsbereich</div></div>
-      </div>
+    <div class="smedia-3">
+<div class="smt-card"><img src="area-hotel-lobby.jpg" alt="Hotel-Lobby" class="smt-img" style="object-position:50% center"><div class="smt-overlay"><div class="smt-label">Lobbybereiche</div></div></div><div class="smt-card"><img src="area-hotel-flure.jpg" alt="Hotelflur" class="smt-img" style="object-position:50% center"><div class="smt-overlay"><div class="smt-label">Flure</div></div></div><div class="smt-card"><img src="area-hotel-fruehstueck.jpg" alt="Frühstücksbereich Hotel" class="smt-img" style="object-position:50% center"><div class="smt-overlay"><div class="smt-label">Frühstücksbereiche</div></div></div>
     </div>
   </div>
 </section>
