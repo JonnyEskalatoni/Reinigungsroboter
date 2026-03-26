@@ -136,12 +136,41 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;ali
 .r-swc-ico{width:38px;height:38px;background:var(--adim);border:1px solid rgba(47,118,204,.18);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}.r-swc-ico svg{width:17px;height:17px;color:var(--acc)}
 .r-swc h4{font-size:14px;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
 .r-swc p{font-size:13px;color:var(--ts);line-height:1.6}
-.r-sw-visual{background:var(--hero-bg);border-radius:var(--rl);padding:32px;position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end}
-.r-sw-screen{position:absolute;top:20px;left:20px;right:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;padding:14px;font-family:'Inter',monospace;font-size:11px;color:rgba(238,244,248,.68);line-height:1.85}
-.r-sw-screen .acc{color:var(--acc)}.r-sw-screen .ok{color:#3dd68c}.r-sw-screen .warn{color:#f5a623}
-.r-sw-caption{position:relative;z-index:1}
+/* ── Dashboard visual panel ── */
+.r-sw-visual{background:var(--hero-bg);border-radius:var(--rl);padding:24px;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.r-dash-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:2px}
+.r-dash-title{font-family:'Inter Tight',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(238,244,248,.45)}
+.r-dash-dot{width:7px;height:7px;border-radius:50%;background:#3dd68c;box-shadow:0 0 6px rgba(61,214,140,.5);animation:rpulse 2.4s ease-in-out infinite}
+@keyframes rpulse{0%,100%{opacity:1}50%{opacity:.4}}
+.r-dash-live{font-size:10px;font-weight:600;color:#3dd68c;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:5px}
+/* panels */
+.r-dp{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px 16px}
+.r-dp-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(238,244,248,.38);margin-bottom:10px}
+/* device status rows */
+.r-drow{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.r-drow:last-child{border-bottom:none;padding-bottom:0}
+.r-drow-name{font-size:12px;font-weight:500;color:rgba(238,244,248,.75)}
+.r-drow-loc{font-size:10.5px;color:rgba(238,244,248,.35);margin-left:6px}
+.r-drow-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:3px;letter-spacing:.04em}
+.r-drow-badge.ok{background:rgba(61,214,140,.14);color:#3dd68c;border:1px solid rgba(61,214,140,.22)}
+.r-drow-badge.charge{background:rgba(47,118,204,.18);color:#6faee8;border:1px solid rgba(47,118,204,.26)}
+.r-drow-badge.ready{background:rgba(255,255,255,.07);color:rgba(238,244,248,.55);border:1px solid rgba(255,255,255,.12)}
+/* kpi grid */
+.r-dkpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.r-dkpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:10px 12px;text-align:center}
+.r-dkpi-val{font-family:'Inter Tight',sans-serif;font-size:16px;font-weight:700;color:#eef4f8;line-height:1.1;letter-spacing:-.02em}
+.r-dkpi-lbl{font-size:9.5px;color:rgba(238,244,248,.38);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
+/* next actions */
+.r-dact{display:flex;flex-direction:column;gap:6px}
+.r-dact-row{display:flex;align-items:center;gap:9px;font-size:11.5px;color:rgba(238,244,248,.62)}
+.r-dact-ico{width:18px;height:18px;border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.r-dact-ico.warn{background:rgba(245,166,35,.12);color:#f5a623}
+.r-dact-ico.ok{background:rgba(61,214,140,.1);color:#3dd68c}
+.r-dact-ico.acc{background:rgba(47,118,204,.15);color:#6faee8}
+/* caption */
+.r-sw-caption{margin-top:4px}
 .r-sw-caption h4{font-family:'Inter Tight',sans-serif;font-size:14px;font-weight:700;color:#eef4f8;margin-bottom:4px}
-.r-sw-caption p{font-size:12px;color:rgba(238,244,248,.5)}
+.r-sw-caption p{font-size:12px;color:rgba(238,244,248,.42);line-height:1.6}
 .r-faq-lay{display:grid;grid-template-columns:1fr 1.9fr;gap:72px;align-items:start}
 .r-fi h2{font-size:clamp(24px,2.4vw,36px);font-weight:800;margin-bottom:14px}
 .r-fi p{font-size:15px;color:var(--ts);line-height:1.7;margin-bottom:22px}
@@ -473,20 +502,74 @@ footer{background:#fff;border-top:1px solid var(--border);padding:48px 0 28px}
         <div class="r-swc"><div class="r-swc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>OTA-Updates &amp; Fernwartung</h4><p>Software-Updates automatisch. Service-Techniker können remote diagnostizieren. Wartungsintervalle proaktiv angezeigt.</p></div></div>
       </div>
       <div class="r-sw-visual">
-        <div class="r-sw-screen">
-          <span class="acc">// Flottenübersicht</span><br>
-          Roboter 01 · Halle A &nbsp; <span class="ok">● Aktiv</span><br>
-          Roboter 02 · Eingang &nbsp;<span class="acc">● Lädt</span><br>
-          Roboter 03 · Lager &nbsp;&nbsp; <span class="warn">● Bereit</span><br><br>
-          <span class="acc">// Heute gereinigt</span><br>
-          Fläche: <span class="ok">4.280 m²</span><br>
-          Betriebszeit: <span class="ok">6h 42min</span><br>
-          Qualität: <span class="ok">97 %</span>
+
+        <!-- Header -->
+        <div class="r-dash-header">
+          <span class="r-dash-title">Flotten-Dashboard</span>
+          <span class="r-dash-live"><span class="r-dash-dot"></span>Live</span>
         </div>
+
+        <!-- Modul A: Gerätestatus -->
+        <div class="r-dp">
+          <div class="r-dp-label">Gerätestatus</div>
+          <div class="r-drow">
+            <span><span class="r-drow-name">Roboter 01</span><span class="r-drow-loc">· Halle A</span></span>
+            <span class="r-drow-badge ok">Reinigung aktiv</span>
+          </div>
+          <div class="r-drow">
+            <span><span class="r-drow-name">Roboter 02</span><span class="r-drow-loc">· Eingang</span></span>
+            <span class="r-drow-badge charge">Lädt</span>
+          </div>
+          <div class="r-drow">
+            <span><span class="r-drow-name">Roboter 03</span><span class="r-drow-loc">· Lager</span></span>
+            <span class="r-drow-badge ready">Bereit</span>
+          </div>
+        </div>
+
+        <!-- Modul B: KPIs -->
+        <div class="r-dp">
+          <div class="r-dp-label">Heute gereinigt</div>
+          <div class="r-dkpis">
+            <div class="r-dkpi">
+              <div class="r-dkpi-val">4.280</div>
+              <div class="r-dkpi-lbl">m² Fläche</div>
+            </div>
+            <div class="r-dkpi">
+              <div class="r-dkpi-val">6:42</div>
+              <div class="r-dkpi-lbl">Betriebszeit</div>
+            </div>
+            <div class="r-dkpi">
+              <div class="r-dkpi-val" style="color:#3dd68c">97%</div>
+              <div class="r-dkpi-lbl">Qualität</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modul C: Nächste Aktionen -->
+        <div class="r-dp">
+          <div class="r-dp-label">Nächste Aktionen</div>
+          <div class="r-dact">
+            <div class="r-dact-row">
+              <span class="r-dact-ico warn"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              Wartung in 3 Tagen fällig
+            </div>
+            <div class="r-dact-row">
+              <span class="r-dact-ico ok"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+              Wochenbericht exportierbar
+            </div>
+            <div class="r-dact-row">
+              <span class="r-dact-ico acc"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></span>
+              Nachtroute für 22:00 Uhr geplant
+            </div>
+          </div>
+        </div>
+
+        <!-- Caption -->
         <div class="r-sw-caption">
           <h4>Echtzeit-Flottenübersicht</h4>
-          <p>Alle Geräte auf einen Blick – Status, Fortschritt und Berichte.</p>
+          <p>Alle Geräte auf einen Blick – Status, Fortschritt, Berichte und Planung in einer Oberfläche.</p>
         </div>
+
       </div>
     </div>
   </div>
