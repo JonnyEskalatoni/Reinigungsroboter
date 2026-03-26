@@ -59,17 +59,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;ali
 /* HERO */
 .hero{min-height:100vh;padding-top:64px;position:relative;overflow:hidden;display:flex;align-items:stretch;background:var(--hero-bg)}
 .hero::before{display:none}
-.hl{display:flex;flex-direction:column;justify-content:center;padding:88px 64px 72px 72px;position:relative;z-index:2;max-width:640px;min-height:100vh}
+.hl{display:flex;flex-direction:column;justify-content:center;padding:80px 56px 72px 64px;position:relative;z-index:2;max-width:660px;min-height:100vh}
 .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);background:rgba(58,123,213,.14);border:1px solid rgba(58,123,213,.26);padding:6px 13px;border-radius:2px;margin-bottom:28px;width:fit-content;opacity:1;animation:fu .6s .1s both}
 .eyebrow span{width:5px;height:5px;background:var(--acc);border-radius:50%;animation:blink 2.5s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-size:clamp(28px,2.8vw,44px);font-weight:800;line-height:1.07;opacity:1;animation:fu .65s .22s both;color:#eef4f8}
+.hero h1{font-size:clamp(30px,3.0vw,46px);font-weight:800;line-height:1.05;opacity:1;animation:fu .65s .22s both;color:#eef4f8}
 .hero h1 em{font-style:normal;color:var(--acc)}
-.hsub{margin-top:22px;font-size:16px;color:rgba(238,244,248,.68);max-width:440px;line-height:1.75;font-weight:400;opacity:1;animation:fu .65s .35s both}
-.hact{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;opacity:1;animation:fu .65s .46s both}
-.hproof{display:flex;gap:0;margin-top:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:nowrap;align-items:stretch;opacity:1;animation:fu .65s .58s both}
-.pnum{font-family:'Inter Tight',sans-serif;font-size:18px;font-weight:700;display:block;line-height:1.1;color:#eef4f8;letter-spacing:-.01em}
-.plbl{font-size:11px;color:rgba(238,244,248,.55);margin-top:5px;max-width:130px;line-height:1.4}
+.hsub{margin-top:18px;font-size:16px;color:rgba(238,244,248,.66);max-width:460px;line-height:1.72;font-weight:400;opacity:1;animation:fu .65s .35s both}
+.hact{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;opacity:1;animation:fu .65s .46s both}
+.hproof{display:flex;gap:0;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.09);flex-wrap:nowrap;align-items:center;opacity:1;animation:fu .65s .58s both}
+.pnum{font-family:'Inter Tight',sans-serif;font-size:15px;font-weight:700;display:block;line-height:1.15;color:#eef4f8;letter-spacing:-.01em;white-space:nowrap}
+.plbl{font-size:10.5px;color:rgba(238,244,248,.50);margin-top:4px;max-width:140px;line-height:1.38;white-space:nowrap}
 .pq{display:none}
 @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
@@ -83,11 +83,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;ali
 .phico{width:48px;height:48px;border:1px solid rgba(58,123,213,.22);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(58,123,213,.1)}.phico svg{width:22px;height:22px;color:var(--acc)}
 
 /* ── KPI + Demo-Button Row ── */
-.hproof-kpis{display:flex;gap:0;flex:1;align-items:stretch;flex-wrap:nowrap;min-width:0}
-.hproof-kpis>div{flex:1;min-width:0;border-right:1px solid rgba(255,255,255,.08);padding:0 24px 0 0;margin-right:24px;display:flex;flex-direction:column;justify-content:center}
+.hproof-kpis{display:flex;gap:0;flex:1;align-items:center;flex-wrap:nowrap;min-width:0}
+.hproof-kpis>div{flex:0 0 auto;min-width:0;border-right:1px solid rgba(255,255,255,.1);padding:0 28px 0 0;margin-right:28px;display:flex;flex-direction:column;justify-content:center}
 .hproof-kpis>div:last-child{border-right:none;padding-right:0;margin-right:0}
-.hproof-demo{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;align-self:center;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:rgba(238,244,248,.62);border:1px solid rgba(255,255,255,.14);background:transparent;padding:9px 16px;border-radius:4px;white-space:nowrap;transition:all .2s ease;text-decoration:none;letter-spacing:.01em}
-.hproof-demo:hover{color:rgba(238,244,248,.9);border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.06)}
+.hproof-demo{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;align-self:center;margin-left:20px;font-family:'Inter',sans-serif;font-size:11.5px;font-weight:500;color:rgba(238,244,248,.50);border:1px solid rgba(255,255,255,.12);background:transparent;padding:8px 14px;border-radius:3px;white-space:nowrap;transition:all .2s ease;text-decoration:none;letter-spacing:.02em}
+.hproof-demo:hover{color:rgba(238,244,248,.82);border-color:rgba(255,255,255,.24);background:rgba(255,255,255,.05)}
 .hproof-demo svg{flex-shrink:0}
 
 /* SIGNAL BAR */
@@ -277,6 +277,7 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
     </a>
     <div class="nlinks">
       <a href="#rechner">Kalkulation</a>
+      <a href="roboter.html?from=reinigungsunternehmen">Roboter</a>
       <a href="#modell">Geschäftsmodell</a>
       <a href="#prozess">Ablauf</a>
       <a href="#faq">FAQ</a>
@@ -291,29 +292,32 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
 <section class="hero">
   <div class="hl">
     <div class="eyebrow"><span></span>Reinigungsrobotik für Reinigungsunternehmen</div>
-    <h1>Mehr Aufträge.<br>Weniger Personalabhängigkeit.<br><em>Robotik für Ihr Reinigungsgeschäft.</em></h1>
+    <h1>Mehr Aufträge.<br>Weniger Personalabhängigkeit.<br><em>Robotik für Ihr<br>Reinigungsgeschäft.</em></h1>
     <p class="hsub">Erweitern Sie Ihr Leistungsangebot mit autonomer Reinigung und automatisieren Sie Kundenflächen ohne zusätzlichen Personaldruck.</p>
     <div class="hact">
       <a href="#termin" class="btn btn-p btn-lg">Robotik prüfen lassen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="roboter.html?from=reinigungsunternehmen" class="btn-ol">Technische Details ansehen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="#rechner" class="btn-ol">Kalkulation starten <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    
+      <a href="roboter.html" class="btn-ol" style="font-size:14px;padding:11px 20px;border:1px solid rgba(255,255,255,.25);color:rgba(238,247,255,.8);background:transparent;border-radius:4px;font-family:'Inter',sans-serif;font-weight:600;display:inline-flex;align-items:center;gap:7px;text-decoration:none">Roboter ansehen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="hproof">
       <div class="hproof-kpis">
         <div>
           <span class="pnum">Mehr Aufträge</span>
-          <div class="plbl">Auch bei Personalmangel realisierbar</div>
+          <div class="plbl">Auch bei Personalmangel umsetzbar</div>
         </div>
         <div>
           <span class="pnum">Automatisiert skalieren</span>
           <div class="plbl">Flächen ausbauen statt Personal aufbauen</div>
         </div>
         <div>
-          <span class="pnum">Planbarer kalkulieren</span>
+          <span class="pnum">Planbar kalkulieren</span>
           <div class="plbl">Mehr Sicherheit pro Objekt</div>
         </div>
       </div>
       <a href="#termin" class="hproof-demo">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Demo ansehen
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Demo ansehen
       </a>
     </div>
   </div>
@@ -429,7 +433,7 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
             <div class="rhlv" id="re">–</div>
           </div>
           <div class="rnote" id="rn"></div>
-          <a href="#termin" class="ccta">Fläche prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#termin" class="ccta">Robotik prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="cempty" id="cemp">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="7" y1="8" x2="7" y2="12"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="17" y1="10" x2="17" y2="12"/></svg>
@@ -482,6 +486,8 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
   </div>
 </section>
 
+<div style="margin-top:28px;padding-top:22px;border-top:1px solid var(--borders,var(--border))"><a href="roboter.html?from=reinigungsunternehmen#specs" style="font-size:13px;font-weight:600;color:var(--acc);display:inline-flex;align-items:center;gap:6px;text-decoration:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Alle technischen Daten ansehen →</a></div>
+
 <section class="faq" id="faq">
   <div class="con">
     <div class="flay">
@@ -525,7 +531,7 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
         <div class="dr"><div class="df"><label>Geschäftliche E-Mail *</label><input type="email" placeholder="m.mustermann@center.de" required></div><div class="df"><label>Telefon *</label><input type="tel" placeholder="+49 ..." required></div></div>
         <div class="dr"><div class="df full"><label>Betriebsgröße</label><select><option value="">Bitte wählen …</option><option>Kleinbetrieb (bis 20 Mitarbeiter)</option><option>Mittelbetrieb (20–100 Mitarbeiter)</option><option>Großbetrieb (100+ Mitarbeiter)</option><option>Franchise / Verbund</option></select></div></div>
         <div class="dr"><div class="df full"><label>Kurze Flächenbeschreibung</label><textarea rows="3" placeholder="z. B. 3 Gewerbeobjekte, je ca. 1.500 m², tägliche Reinigung, aktuell je 2 Reinigungskräfte pro Objekt …"></textarea></div></div>
-        <button class="dsub" onclick="hs()">Fläche prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button class="dsub" onclick="hs()">Robotik prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
         <p class="fdisc">Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
         <div class="demo-optional">
           <div class="demo-opt-label">Live-Demo optional</div>

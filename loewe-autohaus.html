@@ -265,13 +265,14 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
     </a>
     <div class="nlinks">
       <a href="#rechner">Kosten prüfen</a>
+      <a href="roboter.html?from=autohaus">Roboter</a>
       <a href="#bereiche">Einsatzbereiche</a>
       <a href="#prozess">Ablauf</a>
       <a href="#faq">FAQ</a>
     </div>
     <div class="na">
       <a href="#termin" class="btn btn-g">Live-Demo ansehen</a>
-      <a href="#termin" class="btn btn-p">Fläche prüfen lassen →</a>
+      <a href="#termin" class="btn btn-p">Robotik prüfen lassen →</a>
     </div>
   </div>
 </nav>
@@ -282,8 +283,12 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
     <h1>Saubere Showrooms.<br>Saubere Übergaben.<br><em>Ohne zusätzlichen Personalaufwand.</em></h1>
     <p class="hsub">Showroomflächen, Servicebereiche und Werkstattzugänge werden zuverlässig gereinigt –<br>auch außerhalb der Betriebszeiten.</p>
     <div class="hact">
-      <a href="#termin" class="btn btn-p btn-lg">Fläche prüfen lassen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#termin" class="btn btn-p btn-lg">Robotik prüfen lassen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="roboter.html?from=autohaus" class="btn-ol">Technische Details ansehen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      
       <a href="#rechner" class="btn-ol">ROI berechnen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    
+      <a href="roboter.html" class="btn-ol" style="font-size:14px;padding:11px 20px;border:1px solid rgba(255,255,255,.25);color:rgba(238,247,255,.8);background:transparent;border-radius:4px;font-family:'Inter',sans-serif;font-weight:600;display:inline-flex;align-items:center;gap:7px;text-decoration:none">Roboter ansehen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
     <div class="hproof"><div class="hproof-kpis">
       <div><span class="pnum">Showroom</span><div class="plbl">Sauber für jeden Kunden – täglich, planbar</div></div>
@@ -375,7 +380,7 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
             <div class="rhlv" id="re">–</div>
           </div>
           <div class="rnote" id="rn"></div>
-          <a href="#termin" class="ccta">Fläche prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#termin" class="ccta">Robotik prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="cempty" id="cemp">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="7" y1="8" x2="7" y2="12"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="17" y1="10" x2="17" y2="12"/></svg>
@@ -428,6 +433,8 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
   </div>
 </section>
 
+<div style="margin-top:28px;padding-top:22px;border-top:1px solid var(--borders,var(--border))"><a href="roboter.html?from=autohaus#specs" style="font-size:13px;font-weight:600;color:var(--acc);display:inline-flex;align-items:center;gap:6px;text-decoration:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Alle technischen Daten ansehen →</a></div>
+
 <section class="faq" id="faq">
   <div class="con">
     <div class="flay">
@@ -471,7 +478,7 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
         <div class="dr"><div class="df"><label>Geschäftliche E-Mail *</label><input type="email" placeholder="m.mustermann@center.de" required></div><div class="df"><label>Telefon *</label><input type="tel" placeholder="+49 ..." required></div></div>
         <div class="dr"><div class="df full"><label>Betriebstyp</label><select><option value="">Bitte wählen …</option><option>Autohaus (Einzel)</option><option>Autohaus (Gruppe / Mehrmarken)</option><option>Werkstatt / Servicebetrieb</option><option>Nutzfahrzeugbetrieb</option><option>Motorradbetrieb</option><option>Sonstiges</option></select></div></div>
         <div class="dr"><div class="df full"><label>Kurze Flächenbeschreibung</label><textarea rows="3" placeholder="z. B. Showroom ca. 800 m², Serviceannahme ca. 300 m², täglich gereinigt, aktuell 1 Reinigungskraft …"></textarea></div></div>
-        <button class="dsub" onclick="hs()">Fläche prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button class="dsub" onclick="hs()">Robotik prüfen lassen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
         <p class="fdisc">Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</p>
         <div class="demo-optional">
           <div class="demo-opt-label">Live-Demo optional</div>
