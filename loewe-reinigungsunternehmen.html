@@ -59,35 +59,35 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;ali
 /* HERO */
 .hero{min-height:100vh;padding-top:64px;position:relative;overflow:hidden;display:flex;align-items:stretch;background:var(--hero-bg)}
 .hero::before{display:none}
-.hl{display:flex;flex-direction:column;justify-content:center;padding:80px 56px 80px 64px;position:relative;z-index:2;max-width:700px;min-height:100vh}
+.hl{display:flex;flex-direction:column;justify-content:center;padding:88px 64px 72px 72px;position:relative;z-index:2;max-width:640px;min-height:100vh}
 .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);background:rgba(58,123,213,.14);border:1px solid rgba(58,123,213,.26);padding:6px 13px;border-radius:2px;margin-bottom:28px;width:fit-content;opacity:1;animation:fu .6s .1s both}
 .eyebrow span{width:5px;height:5px;background:var(--acc);border-radius:50%;animation:blink 2.5s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-size:clamp(32px,3.4vw,54px);font-weight:800;line-height:1.06;opacity:1;animation:fu .65s .22s both;color:#eef4f8}
+.hero h1{font-size:clamp(28px,2.8vw,44px);font-weight:800;line-height:1.07;opacity:1;animation:fu .65s .22s both;color:#eef4f8}
 .hero h1 em{font-style:normal;color:var(--acc)}
-.hsub{margin-top:20px;font-size:17px;color:rgba(238,244,248,.72);max-width:500px;line-height:1.72;font-weight:400;opacity:1;animation:fu .65s .35s both}
-.hact{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;opacity:1;animation:fu .65s .46s both}
-.hproof{display:flex;gap:20px;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:nowrap;align-items:center;opacity:1;animation:fu .65s .58s both}
-.pnum{font-family:'Inter Tight',sans-serif;font-size:22px;font-weight:800;display:block;line-height:1;color:#eef4f8}
-.plbl{font-size:11px;color:rgba(238,244,248,.52);margin-top:4px;max-width:120px;line-height:1.35}
+.hsub{margin-top:22px;font-size:16px;color:rgba(238,244,248,.68);max-width:440px;line-height:1.75;font-weight:400;opacity:1;animation:fu .65s .35s both}
+.hact{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;opacity:1;animation:fu .65s .46s both}
+.hproof{display:flex;gap:0;margin-top:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:nowrap;align-items:stretch;opacity:1;animation:fu .65s .58s both}
+.pnum{font-family:'Inter Tight',sans-serif;font-size:18px;font-weight:700;display:block;line-height:1.1;color:#eef4f8;letter-spacing:-.01em}
+.plbl{font-size:11px;color:rgba(238,244,248,.55);margin-top:5px;max-width:130px;line-height:1.4}
 .pq{display:none}
 @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
 .hr{position:absolute;inset:0;z-index:0}
 .himg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% center;display:block}
-.himgo{position:absolute;inset:0;background:linear-gradient(to right,rgba(16,42,67,0.86) 0%,rgba(16,42,67,0.70) 28%,rgba(16,42,67,0.38) 52%,rgba(16,42,67,0.10) 70%,transparent 100%);z-index:1}
+.himgo{position:absolute;inset:0;background:linear-gradient(to right,rgba(16,42,67,0.92) 0%,rgba(16,42,67,0.82) 24%,rgba(16,42,67,0.52) 44%,rgba(16,42,67,0.14) 62%,rgba(16,42,67,0.04) 78%,transparent 100%);z-index:1}
 .hr::after{display:none}
-.hph{position:absolute;inset:0;background:var(--hero-bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:1}
+.hph{position:absolute;inset:0;background:linear-gradient(135deg,var(--hero-bg) 0%,#0d2035 40%,#122840 70%,#0f2236 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:1}
 .phfile{font-family:'Inter',monospace;font-size:12px;color:var(--acc);background:rgba(58,123,213,.12);border:1px solid rgba(58,123,213,.22);padding:4px 12px;border-radius:2px}
 .phdesc{font-size:13px;color:rgba(238,244,248,.45);text-align:center;max-width:240px;line-height:1.55}
 .phico{width:48px;height:48px;border:1px solid rgba(58,123,213,.22);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(58,123,213,.1)}.phico svg{width:22px;height:22px;color:var(--acc)}
 
 /* ── KPI + Demo-Button Row ── */
-.hproof-kpis{display:flex;gap:20px;flex:1;align-items:center;flex-wrap:nowrap;min-width:0}
-.hproof-kpis>div{flex:1;min-width:0;border-right:1px solid rgba(255,255,255,.1);padding-right:20px}
-.hproof-kpis>div:last-child{border-right:none;padding-right:0}
-.hproof-demo{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:rgba(238,244,248,.8);border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);backdrop-filter:blur(8px);padding:10px 18px;border-radius:4px;white-space:nowrap;transition:all .2s ease;text-decoration:none}
-.hproof-demo:hover{color:#fff;border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.1)}
+.hproof-kpis{display:flex;gap:0;flex:1;align-items:stretch;flex-wrap:nowrap;min-width:0}
+.hproof-kpis>div{flex:1;min-width:0;border-right:1px solid rgba(255,255,255,.08);padding:0 24px 0 0;margin-right:24px;display:flex;flex-direction:column;justify-content:center}
+.hproof-kpis>div:last-child{border-right:none;padding-right:0;margin-right:0}
+.hproof-demo{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;align-self:center;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:rgba(238,244,248,.62);border:1px solid rgba(255,255,255,.14);background:transparent;padding:9px 16px;border-radius:4px;white-space:nowrap;transition:all .2s ease;text-decoration:none;letter-spacing:.01em}
+.hproof-demo:hover{color:rgba(238,244,248,.9);border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.06)}
 .hproof-demo svg{flex-shrink:0}
 
 /* SIGNAL BAR */
@@ -292,19 +292,33 @@ footer{background:#f5f7fa;border-top:1px solid var(--border);padding:48px 0 30px
   <div class="hl">
     <div class="eyebrow"><span></span>Reinigungsrobotik für Reinigungsunternehmen</div>
     <h1>Mehr Aufträge.<br>Weniger Personalabhängigkeit.<br><em>Robotik für Ihr Reinigungsgeschäft.</em></h1>
-    <p class="hsub">Erweitern Sie Ihr Leistungsangebot mit autonomer Reinigung –<br>und automatisieren Sie Kundenflächen ohne zusätzlichen Personaldruck.</p>
+    <p class="hsub">Erweitern Sie Ihr Leistungsangebot mit autonomer Reinigung und automatisieren Sie Kundenflächen ohne zusätzlichen Personaldruck.</p>
     <div class="hact">
       <a href="#termin" class="btn btn-p btn-lg">Robotik prüfen lassen <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="#rechner" class="btn-ol">Kalkulation starten <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="hproof"><div class="hproof-kpis">
-      <div><span class="pnum">Mehr Aufträge</span><div class="plbl">Auch bei Personalmangel umsetzen</div></div>
-      <div><span class="pnum">Automatisiert</span><div class="plbl">Flächen skalieren statt Personal aufbauen</div></div>
-      <div><span class="pnum">Planbar</span><div class="plbl">Kalkulationssicherheit pro Objekt</div></div>
-    </div><a href="#termin" class="hproof-demo"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Demo ansehen</a></div>
+    <div class="hproof">
+      <div class="hproof-kpis">
+        <div>
+          <span class="pnum">Mehr Aufträge</span>
+          <div class="plbl">Auch bei Personalmangel realisierbar</div>
+        </div>
+        <div>
+          <span class="pnum">Automatisiert skalieren</span>
+          <div class="plbl">Flächen ausbauen statt Personal aufbauen</div>
+        </div>
+        <div>
+          <span class="pnum">Planbarer kalkulieren</span>
+          <div class="plbl">Mehr Sicherheit pro Objekt</div>
+        </div>
+      </div>
+      <a href="#termin" class="hproof-demo">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Demo ansehen
+      </a>
+    </div>
   </div>
   <div class="hr">
-    <img class="himg" src="hero-cleaning-company.jpg" alt="Reinigungsroboter im Kundeneinsatz" id="himg" onerror="document.getElementById('himg').style.display='none'" style="object-position:55% center">
+    <img class="himg" src="hero-cleaning-company.jpg" alt="Techniker mit Reinigungsroboter im Einsatz" id="himg" onerror="document.getElementById('himg').style.display='none'" style="object-position:58% center">
     <div class="himgo"></div>
     <div class="hph" id="hph" style="display:none">
       <div class="phico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="8" cy="21" r="1"/><circle cx="16" cy="21" r="1"/><line x1="8" y1="17" x2="8" y2="21"/><line x1="16" y1="17" x2="16" y2="21"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
@@ -589,4 +603,3 @@ function hs(){
 </script>
 </body>
 </html>
-  const fs=docum
